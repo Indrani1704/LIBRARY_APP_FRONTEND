@@ -24,12 +24,12 @@ import "../../css/normalize.css";
 import "../../css/vendor.css";
 import "../../style.css";
 
-const BASE_URL = "http://localhost:5000";
 
-const getImage = (img?: string) => {
-  if (!img) return "https://via.placeholder.com/150x220";
+
+const getImage = (img) => {
+  if (!img) return "/placeholder.png";
   if (img.startsWith("http")) return img;
-  return `${BASE_URL}/${img}`;
+  return `${import.meta.env.VITE_API_URL}/${img}`;
 };
 
 export default function Home() {

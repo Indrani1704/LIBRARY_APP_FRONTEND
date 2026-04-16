@@ -42,7 +42,7 @@ export const register = createAsyncThunk(
     { rejectWithValue }
   ) => {
     try {
-      const res = await API.post("/auth/register", data);
+      const res = await API.post("/api/auth/register", data);
       return res.data;
     } catch (err: any) {
       return rejectWithValue(err.response?.data?.message || "Register failed");
@@ -58,7 +58,7 @@ export const login = createAsyncThunk(
     { rejectWithValue }
   ) => {
     try {
-      const res = await API.post("/auth/login", data);
+      const res = await API.post("/api/auth/login", data);
 
       //  STORE HERE (single source)
       sessionStorage.setItem("token", res.data.token);
