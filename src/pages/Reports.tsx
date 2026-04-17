@@ -19,28 +19,28 @@ const Reports = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const res = await fetch(
-          `https://newsapi.org/v2/everything?q=literature OR books OR novels&language=en&sortBy=publishedAt&pageSize=12&apiKey=${API_KEY}`
-        );
+  const fetchNews = async () => {
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/news`
+      );
 
-        const data = await res.json();
+      const data = await res.json();
 
-        if (data.status !== "ok") {
-          throw new Error(data.message);
-        }
-
-        setNews(data.articles || []);
-      } catch (err: any) {
-        setError("⚠️ Unable to load news (use backend for full support)");
-      } finally {
-        setLoading(false);
+      if (data.status !== "ok") {
+        throw new Error();
       }
-    };
 
-    fetchNews();
-  }, []);
+      setNews(data.articles || []);
+    } catch (err) {
+      setError("⚠️ Unable to load news");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchNews();
+}, []);
 
   return (
     <div className="reports-container">
