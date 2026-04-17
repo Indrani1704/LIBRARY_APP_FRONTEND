@@ -817,23 +817,18 @@ void setAuthorFilter;
         </div>
       </section>
 
-      {/* DOWNLOAD APP */}
-      <section className="py-5" style={{ background: "#fdf6ec" }}>
-        <div className="container">
-          <div className="row align-items-center justify-content-center">
-            {/* 📱 MOBILE IMAGE */}
-            <div className="col-md-4 text-center mb-4 mb-md-0">
-              <img
-                src="uploads/3 (2).png"
-                alt="mobile"
-                style={{
-                  maxWidth: "260px",
-                  borderRadius: "20px",
-                  boxShadow: "0 15px 40px rgba(0,0,0,0.2)",
-                }}
-              />
-            </div>
-
+     {/* 📱 MOBILE IMAGE */}
+<div className="col-md-4 text-center mb-4 mb-md-0">
+  <img
+    src={`${import.meta.env.VITE_API_URL}/images/3 (2).png`}
+    alt="mobile"
+    style={{
+      maxWidth: "260px",
+      borderRadius: "20px",
+      boxShadow: "0 15px 40px rgba(0,0,0,0.2)",
+    }}
+  />
+</div>
             {/* TEXT + BUTTONS */}
             <div className="col-md-6">
               <h2 className="section-title mb-3">Download our app now</h2>
