@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { fetchBooks } from "../store/slices/bookSlice";
 
-const BASE_URL = "http://localhost:5000";
+
 
 /* IMAGE */
 const getImage = (img?: string) => { // ✅ FIX
   if (!img) return "https://via.placeholder.com/150x220?text=Book";
   if (img.startsWith("http")) return img;
-  return `${BASE_URL}/${img.replace(/\\/g, "/")}`;
+  return `${import.meta.env.VITE_API_URL}/${img.replace(/\\/g, "/")}`;
 };
 
 /* TYPES */

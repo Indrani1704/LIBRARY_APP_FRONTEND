@@ -7,12 +7,12 @@ import { addToWishlist } from "../store/slices/wishlistSlice";
 import { FaHeart } from "react-icons/fa";
 import { toast } from "sonner";
 
-const BASE_URL = "http://localhost:5000";
+
 
 const getImage = (img: string) => {
   if (!img) return "https://via.placeholder.com/150x220?text=Book";
   if (img.startsWith("http")) return img;
-  return `${BASE_URL}/${img.replace(/\\/g, "/")}`;
+  return `${import.meta.env.VITE_API_URL}/${img.replace(/\\/g, "/")}`;
 };
 
 export default function AllBooks() {

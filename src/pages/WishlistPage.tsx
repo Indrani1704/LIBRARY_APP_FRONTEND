@@ -13,12 +13,13 @@ import {
   FaTrash,
 } from "react-icons/fa"; // ✅ FIX removed FaHeart
 
-const BASE_URL = "http://localhost:5000";
+
+
 
 const getImage = (img?: string) => {
   if (!img) return "https://via.placeholder.com/150";
   if (img.startsWith("http")) return img;
-  return `${BASE_URL}/${img}`;
+  return `${import.meta.env.VITE_API_URL}/${img}`;
 };
 
 export default function WishlistPage() {
