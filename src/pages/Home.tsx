@@ -816,52 +816,55 @@ void setAuthorFilter;
           </div>
         </div>
       </section>
-
-     {/* 📱 MOBILE IMAGE */}
+{/* 📱 MOBILE IMAGE */}
 <div className="col-md-4 text-center mb-4 mb-md-0">
   <img
     src={`${import.meta.env.VITE_API_URL}/uploads/mobile.png`}
     alt="mobile"
+    onError={(e) => {
+      e.currentTarget.src = "/placeholder.png"; // fallback if fails
+    }}
     style={{
       maxWidth: "260px",
+      width: "100%",
       borderRadius: "20px",
       boxShadow: "0 15px 40px rgba(0,0,0,0.2)",
     }}
   />
 </div>
-            {/* TEXT + BUTTONS */}
-            <div className="col-md-6">
-              <h2 className="section-title mb-3">Download our app now</h2>
 
-              <p className="text-muted">
-                Read books anywhere, anytime. Discover thousands of stories
-                right from your phone.
-              </p>
+{/* TEXT + BUTTONS */}
+<div className="col-md-6">
+  <h2 className="section-title mb-3">Download our app now</h2>
 
-              {/* STORE BUTTONS */}
-              <div className="d-flex gap-3 mt-4 flex-wrap">
-                {/* GOOGLE PLAY */}
-                <div className="store-btn">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                    alt="playstore"
-                    style={{ height: "50px" }}
-                  />
-                </div>
+  <p className="text-muted">
+    Read books anywhere, anytime. Discover thousands of stories
+    right from your phone.
+  </p>
 
-                {/* APP STORE */}
-                <div className="store-btn">
-                  <img
-                    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                    alt="appstore"
-                    style={{ height: "50px" }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  {/* STORE BUTTONS */}
+  <div className="d-flex gap-3 mt-4 flex-wrap">
+    
+    {/* GOOGLE PLAY */}
+    <div className="store-btn">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+        alt="playstore"
+        style={{ height: "50px", maxWidth: "160px" }}
+      />
+    </div>
+
+    {/* APP STORE */}
+    <div className="store-btn">
+      <img
+        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+        alt="appstore"
+        style={{ height: "50px", maxWidth: "160px" }}
+      />
+    </div>
+
+  </div>
+</div>
       {/* TERMS & CONDITIONS */}
       <section id="terms" className="py-5" style={{ background: "#fdf6ec" }}>
         <div className="container">
