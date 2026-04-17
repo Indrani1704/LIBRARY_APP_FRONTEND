@@ -824,7 +824,7 @@ void setAuthorFilter;
             {/* 📱 MOBILE IMAGE */}
             <div className="col-md-4 text-center mb-4 mb-md-0">
               <img
-                src="images/3 (2).png"
+                src="uploads/3 (2).png"
                 alt="mobile"
                 style={{
                   maxWidth: "260px",

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import API from "../services/api";
 import { FaCheckCircle } from "react-icons/fa";
 
-const BASE_URL = "http://localhost:5000";
+
 
 //  fallback image
 const FALLBACK = "https://placehold.co/200x300?text=Book";
@@ -12,7 +12,7 @@ const getImage = (img?: string) => {
   if (!img) return FALLBACK;
   if (img.startsWith("http")) return img;
 
-  return `${BASE_URL}/${img.replace(/\\/g, "/")}`;
+  return `${import.meta.env.VITE_API_URL}/${img.replace(/\\/g, "/")}`;
 };
 
 export default function Orders() {

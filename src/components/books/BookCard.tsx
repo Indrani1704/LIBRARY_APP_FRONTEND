@@ -12,12 +12,12 @@ import {
   removeFromWishlist,
 } from "../../store/slices/wishlistSlice";
 
-const BASE_URL = "http://localhost:5000";
+
 
 const getImage = (img?: string) => {
   if (!img) return "/book-placeholder.png";
   if (img.startsWith("http")) return img;
-  return `${BASE_URL}/${img}`;
+  return `${import.meta.env.VITE_API_URL}/${img}`;
 };
 
 export default function BookCard({ book }: any) {

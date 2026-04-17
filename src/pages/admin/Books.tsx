@@ -26,13 +26,13 @@ import { fetchCategories } from "../../store/slices/categorySlice";
 import { fetchPublishers } from "../../store/slices/publisherSlice";
 import API from "../../services/api";
 
-const BASE_URL = "http://localhost:5000";
+
 
 // ✅ FIX optional
 const getImage = (img?: string) => {
   if (!img) return "/placeholder.png";
   if (img.startsWith("http")) return img;
-  return `${BASE_URL}/${img}`;
+  return `${import.meta.env.VITE_API_URL}/${img}`;
 };
 
 export default function AdminBooks() {
