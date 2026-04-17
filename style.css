@@ -7489,3 +7489,45 @@ button {
   border-color: #d1d5db !important;
   color: #374151 !important;
 }
+
+.download-section {
+  background: #fdf6ec;
+  padding: 80px 0;
+}
+
+.download-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: #3b1f0e;
+  margin-bottom: 15px;
+}
+
+.download-text {
+  color: #6b4f3b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.mobile-img {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.store-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.store-buttons img {
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.store-buttons img:hover {
+  transform: scale(1.05);
+}
