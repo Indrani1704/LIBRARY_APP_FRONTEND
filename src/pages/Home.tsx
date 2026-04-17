@@ -818,19 +818,19 @@ void setAuthorFilter;
       </section>
 {/* 📱 MOBILE IMAGE */}
 <div className="col-md-4 text-center mb-4 mb-md-0">
-  <img
-    src={`${import.meta.env.VITE_API_URL}/uploads/mobile.png`}
-    alt="mobile"
-    onError={(e) => {
-      e.currentTarget.src = "/placeholder.png"; // fallback if fails
-    }}
-    style={{
-      maxWidth: "260px",
-      width: "100%",
-      borderRadius: "20px",
-      boxShadow: "0 15px 40px rgba(0,0,0,0.2)",
-    }}
-  />
+ <img
+  src={`${import.meta.env.VITE_API_URL || "https://library-app-1-0n0j.onrender.com"}/uploads/mobile.png`}
+  alt="mobile"
+  onError={(e) => {
+    e.currentTarget.src = "/placeholder.png";
+  }}
+  style={{
+    maxWidth: "260px",
+    width: "100%",
+    borderRadius: "20px",
+    boxShadow: "0 15px 40px rgba(0,0,0,0.2)",
+  }}
+/>
 </div>
 
 {/* TEXT + BUTTONS */}
