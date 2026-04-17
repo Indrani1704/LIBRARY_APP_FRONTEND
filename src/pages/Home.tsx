@@ -820,7 +820,7 @@ void setAuthorFilter;
      {/* 📱 MOBILE IMAGE */}
 <div className="col-md-4 text-center mb-4 mb-md-0">
   <img
-    src={`${import.meta.env.VITE_API_URL}/images/3 (2).png`}
+    src={`${import.meta.env.VITE_API_URL}/images/mobile.png`}
     alt="mobile"
     style={{
       maxWidth: "260px",
